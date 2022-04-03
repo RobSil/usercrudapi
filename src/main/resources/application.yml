@@ -1,0 +1,14 @@
+
+spring:
+  data:
+    mongodb:
+#      username: ${DATABASE_USERNAME}
+#      password: ${DATABASE_PASSWORD}
+      username: root
+      password: toor
+      database: test_task
+#      port: ${DATABASE_PORT}
+      port: 27017
+      authentication-database: admin
+      auto-index-creation: true
+
