@@ -21,11 +21,6 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User findUserById(String userId) {
-        return userRepository.findById(userId)
-                .orElseThrow(() -> new UserNotFoundException("No user with such ID: " + userId));
-    }
-
     public User saveUser(User user) {
         return userRepository.insert(user);
     }

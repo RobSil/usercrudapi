@@ -21,11 +21,6 @@ public class UserController {
         return userService.findAllUsers();
     }
 
-    @GetMapping("/{userId}")
-    public User findUser(@PathVariable String userId) {
-        return userService.findUserById(userId);
-    }
-
     @PostMapping
     public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);

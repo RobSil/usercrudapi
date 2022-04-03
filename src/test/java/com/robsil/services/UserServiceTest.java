@@ -59,23 +59,6 @@ class UserServiceTest {
     }
 
     @Test
-    void findUserById() {
-        //given
-
-        User user = User.builder().id("asd").name("test").email("test@gmail.com").build();
-
-        given(userRepository.findById(user.getId())).willReturn(Optional.of(user));
-
-        //when
-
-        User actual = underTest.findUserById(user.getId());
-
-        //then
-
-        assertThat(actual).isEqualTo(user);
-    }
-
-    @Test
     void saveUser() {
 
         //given
